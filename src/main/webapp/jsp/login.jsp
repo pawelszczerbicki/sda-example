@@ -4,7 +4,7 @@
 Login form
 <br/>
 
-<c:if test="fail">
+<c:if test="${fail}">
     Logowanie nieudane. Spróbuj ponownie <br/>
 </c:if>
 <form action="/login" method="post">
