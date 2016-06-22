@@ -11,7 +11,7 @@
             <input name="password" type="password">
         </label>
 
-        <button type="button">Register</button>
+        <button type="submit">Register</button>
     </form>
     </body>
 </html>

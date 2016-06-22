@@ -15,7 +15,7 @@ Login form
         <input name="password" type="password">
     </label>
 
-    <button type="button">Login</button>
+    <button type="submit">Login</button>
 </form>
 </body>
 </html>
