@@ -1,7 +1,7 @@
 <html>
     <body>
-    Login form
-    <br/>
+Register form
+<br/>
 
     <form action="/register" method="post">
         <label> Login

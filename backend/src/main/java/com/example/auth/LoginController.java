@@ -21,6 +21,11 @@ public class LoginController {
         return "login";
     }
 
+    @RequestMapping(value = "/", method = GET)
+    public String main() {
+        return "redirect:/login";
+    }
+
     @RequestMapping(value = "/login", method = POST)
     public String login(Model m, User user) {
         if (userService.canLogUser(user))
