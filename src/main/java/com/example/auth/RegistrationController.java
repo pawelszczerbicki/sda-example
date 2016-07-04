@@ -21,8 +21,8 @@ public class RegistrationController {
     }
 
     @RequestMapping(value = "/register", method = POST)
-    public String register(User user){
-        userService.add(user);
+    public String register(User u){
+        userService.add(u);
         return "redirect:/login";
     }
 }
