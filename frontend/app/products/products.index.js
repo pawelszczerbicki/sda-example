@@ -1,4 +1,5 @@
-app.config(function ($stateProvider) {
+module.exports = angular.module("SdaApp.Products",[])
+    .config(function ($stateProvider) {
     $stateProvider.state("app.products", {
         url: '/products',
         templateUrl: "app/products/view/products.html",
@@ -17,4 +18,8 @@ app.config(function ($stateProvider) {
             controller: "EditProductCtrl",
             controllerAs: "ctrl"
         });
-}) ;
+})
+    .controller("ProductsCtrl", require("./controller/all.products.ctrl"))
+    .controller("AddProductCtrl", require("./controller/add.product.ctrl"))
+    .controller("EditProductCtrl", require("./controller/edit.product.ctrl"))
+    .factory("Product", require("./factory/products.factory"));

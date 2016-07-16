@@ -1,4 +1,4 @@
-app.controller("EditProductCtrl", function (Product, $stateParams, $state) {
+module.exports = function (Product, $stateParams, $state) {
 
     this.getOneProduct = function () {
         this.fetched = Product.get({id: $stateParams.id});
@@ -9,4 +9,4 @@ app.controller("EditProductCtrl", function (Product, $stateParams, $state) {
             $state.go("app.products");
         });
     };
-});
+}

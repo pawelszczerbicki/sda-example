@@ -1,0 +1,19 @@
+{
+  "name": "sda",
+  "version": "1.0.0",
+  "description": "",
+
+  "scripts":{
+    "build" : "webpack"
+  },
+
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-resource": "^1.5.7",
+    "angular-ui-router": "^0.3.1"
+  },
+
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}
