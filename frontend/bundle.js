@@ -50,15 +50,14 @@
 	__webpack_require__(6);
 	__webpack_require__(7);
 	__webpack_require__(8);
-
+	__webpack_require__(9);
 	var app = angular.module("SdaApp", [
 	    'ngResource',
 	    'ui.router',
-	    __webpack_require__(9).name
+	    'SdaApp.Products'
 
 	])
 	    .config(function ($stateProvider, $urlRouterProvider) {
-
 	        $urlRouterProvider.otherwise("/products");
 
 	        $stateProvider
@@ -37077,8 +37076,6 @@
 
 	module.exports = angular.module("SdaApp.Products",[])
 	    .config(function ($stateProvider) {
-
-	        console.log("router");
 	    $stateProvider.state("app.products", {
 	        url: '/products',
 	        templateUrl: "app/products/view/products.html",
@@ -37097,6 +37094,7 @@
 	            controller: "EditProductCtrl",
 	            controllerAs: "ctrl"
 	        });
+	        console.log("some")
 	})
 	    .controller("ProductsCtrl", __webpack_require__(7))
 	    .controller("AddProductCtrl", __webpack_require__(6))

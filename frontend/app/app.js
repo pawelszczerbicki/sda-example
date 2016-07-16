@@ -8,6 +8,7 @@ require("./products/products.index");
 var app = angular.module("SdaApp", [
     'ngResource',
     'ui.router',
+    'SdaApp.Products'
 
 ])
     .config(function ($stateProvider, $urlRouterProvider) {
