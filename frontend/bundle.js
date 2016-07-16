@@ -57,16 +57,7 @@
 	    'SdaApp.Products'
 
 	])
-	    .config(function ($stateProvider, $urlRouterProvider) {
-	        $urlRouterProvider.otherwise("/products");
-
-	        $stateProvider
-	            .state("app", {
-	                abstract: true,
-	                url: '',
-	                templateUrl: 'app/view/tabs.html'
-	            })
-	    });
+	    .config(__webpack_require__(11));
 
 /***/ },
 /* 1 */
@@ -37094,7 +37085,6 @@
 	            controller: "EditProductCtrl",
 	            controllerAs: "ctrl"
 	        });
-	        console.log("some")
 	})
 	    .controller("ProductsCtrl", __webpack_require__(7))
 	    .controller("AddProductCtrl", __webpack_require__(6))
@@ -37107,6 +37097,21 @@
 
 	module.exports = function ($resource) {
 	    return $resource("http://localhost:8080/products/:id", {}, {});
+	}
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	module.exports = function ($stateProvider, $urlRouterProvider) {
+	    $urlRouterProvider.otherwise("/products");
+
+	    $stateProvider
+	        .state("app", {
+	            abstract: true,
+	            url: '',
+	            templateUrl: 'app/view/tabs.html'
+	        })
 	}
 
 /***/ }

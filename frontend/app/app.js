@@ -11,13 +11,4 @@ var app = angular.module("SdaApp", [
     'SdaApp.Products'
 
 ])
-    .config(function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/products");
-
-        $stateProvider
-            .state("app", {
-                abstract: true,
-                url: '',
-                templateUrl: 'app/view/tabs.html'
-            })
-    });
+    .config(require("./config"));
