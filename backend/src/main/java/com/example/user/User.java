@@ -2,7 +2,7 @@ package com.example.user;
 
 public class User {
 
-   private String username;
+    private String username;
 
    private String password;
 

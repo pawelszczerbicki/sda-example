@@ -3,6 +3,7 @@ package com.example;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -19,6 +20,8 @@ public class AppInit implements WebApplicationInitializer {
         ServletRegistration.Dynamic dispatcher =
                 servletContext.addServlet(DispatcherServlet.class.getSimpleName(),
                         new DispatcherServlet(context));
+        servletContext.addListener(new RequestContextListener());
+
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
     }

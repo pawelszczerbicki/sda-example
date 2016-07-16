@@ -19,4 +19,8 @@ public class UserService {
     public User add(User u) {
         return repository.add(u);
     }
+
+    public boolean userExistsByUsername(String username) {
+        return repository.getByUsername(username).isPresent();
+    }
 }

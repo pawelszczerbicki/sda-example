@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h2 style="display: inline">Produkty</h2>
+        <button class="btn btn-success" ng-click="ctrl.toggle()">Pokaz/ukryj</button>
+        <br/>
+        <input placeholder="Search" ng-model="searchQuery.name">
+        <table class="table table-condensed" ng-show="ctrl.showProducts">
+            <thead>
+            <tr>
+                <td>Id</td>
+                <td>price</td>
+                <td>name</td>
+                <td>date</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="product in ctrl.products | filter:searchQuery">
+                <th ng-bind="product.id" ui-sref="app.editProducts({id:product.id})"></th>
+                <th ng-bind="product.price | currency"></th>
+                <th ng-bind="product.name | limitTo:3"></th>
+                <th ng-bind="product.date | date"></th>
+            </tr>
+            </tbody>
+        </table>
+        <form>
+            <label> Name:
+                <input ng-model="ctrl.fetched.name">
+            </label>
+            <label>Price
+                <input ng-model="ctrl.fetched.price">
+            </label>
+            <button class="btn btn-success" ng-click="ctrl.editProduct()">
+                Edit</button>
+        </form>
+
+    </div>
+</div>

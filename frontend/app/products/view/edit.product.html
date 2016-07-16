@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-offset-4 col-md-4">
+        Edycja <br/>
+        <form ng-submit="ctrl.addProduct()" name="addProduct" novalidate>
+            <label> Name
+                <input ng-model="ctrl.product.name">
+            </label>
+
+            <label> Price
+                <input require="rfwefewdsa" type="number" name="price" ng-model="ctrl.product.price">
+            </label>
+            <br/>
+            <span ng-show="addProduct.price.$error.number">To nie jest cyfra
+                    </span>
+            <button type="submit" ng-show="addProduct.$valid">Zapisz</button>
+            <button ui-sref="app.products">Anuluj</button>
+        </form>
+    </div>
+</div>
